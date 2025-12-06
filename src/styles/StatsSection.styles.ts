@@ -127,6 +127,8 @@ export const StatCard = styled.div<{ $background: string }>`
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
 
   &::before {
     content: '';
@@ -199,32 +201,42 @@ export const StatTitle = styled.h3`
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.01em;
+  text-align: left;
 `;
 
 export const StatDescription = styled.p`
   font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: auto;
   margin-top: 0.5rem;
   opacity: 0.7;
   line-height: 1.6;
+  text-align: left;
+  flex-grow: 1;
 `;
 
 export const StatValue = styled.div`
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
-  margin-top: 1rem;
-  letter-spacing: -0.02em;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  letter-spacing: 0;
   position: relative;
-  display: inline-block;
+  display: block;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+  line-height: 1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  align-self: flex-start;
   
   &::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -12px;
     left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #0066cc, transparent);
+    width: 70px;
+    height: 4px;
+    background: #0066cc;
     border-radius: 2px;
   }
 
@@ -234,22 +246,22 @@ export const StatValue = styled.div`
   }
 
   @media (max-width: 1024px) {
-    font-size: 2.75rem;
+    font-size: 3.25rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   @media (max-width: 425px) {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   @media (max-width: 375px) {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   @media (max-width: 320px) {
-    font-size: 1.85rem;
+    font-size: 2rem;
   }
 `;

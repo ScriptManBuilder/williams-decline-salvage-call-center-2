@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
         </FooterGrid>
 
         <FooterBottom>
-          <p>&copy; {new Date().getFullYear()} {companyName}. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {companyName}  All rights reserved.</p>
           <p>Enterprise decline-salvage platform for merchants. PCI-DSS compliant. GDPR & CCPA ready.</p>
         </FooterBottom>
       </FooterContent>

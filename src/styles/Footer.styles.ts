@@ -261,7 +261,7 @@ export const ContactLabel = styled.div`
 
 export const ContactValue = styled.a`
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 0.725rem;
   text-decoration: none;
   display: flex;
   align-items: center;
