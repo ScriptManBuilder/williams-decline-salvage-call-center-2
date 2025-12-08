@@ -37,28 +37,28 @@ const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-      question: 'How do I integrate with your Call Center decline recovery platform?',
-      answer: 'Our integration process is designed for businesses running Call Center operations. After setup, your declined transactions are forwarded to our recovery engine via API or secure data feed. Our team provides full technical support, workflow configuration, and agent training materials. Most merchants complete integration within 1-2 weeks with dedicated onboarding assistance.'
+      question: 'Why am I seeing a charge on my bank statement?',
+      answer: 'If you see an unfamiliar charge on your statement, it may be from a recent purchase through a catalog, mail order, or phone order. The charge might appear under our payment processing name rather than the merchant\'s name. Check your recent mail for catalogs or promotional offers you may have responded to. If you still don\'t recognize the charge, please contact us immediately with the transaction details and we\'ll help identify it.'
     },
     {
-      question: 'Which payment processors and gateways are supported?',
-      answer: 'We work with all major payment processors including Stripe, Authorize.net, Braintree, PayPal, Square, and custom gateways. Our platform integrates alongside your existing payment infrastructure without replacing it. For Call Center merchants using specialized gateway routing, our team provides custom integration support tailored to your workflow.'
+      question: 'How do I request a refund?',
+      answer: 'To request a refund, please contact us with your transaction details including the charge amount, date, and any order information you have. Our team will work with the merchant on your behalf to process your refund request. Most refunds are processed within 5-10 business days, though it may take additional time for your bank to post the credit to your account. We\'ll keep you informed throughout the process.'
     },
     {
-      question: 'What are your pricing and billing terms?',
-      answer: 'We offer performance-based pricing with a monthly platform fee plus success commission on recovered revenue. You only pay when we successfully recover declined transactions. Pricing scales with transaction volume and recovery performance. Contact our sales team for a custom quote based on your Call Center operation size and payment volume.'
+      question: 'I didn\'t authorize this charge. What should I do?',
+      answer: 'If you believe a charge is unauthorized, contact us immediately at the phone number listed above. We take unauthorized transactions very seriously and will investigate right away. Please have your bank statement ready with the charge details. In the meantime, you may also want to contact your bank to dispute the charge. We\'ll work quickly to resolve the issue and ensure no further charges occur.'
     },
     {
-      question: 'How do I access technical and merchant support?',
-      answer: 'Reach our merchant support team by phone during business hours (Monday-Friday, 9 AM - 6 PM EST) at the number listed above, or email support@joinserenity.ai anytime. Enterprise merchants receive priority support with dedicated account management and 24/7 API monitoring for mission-critical Call Center operations.'
+      question: 'How do I cancel a subscription or prevent future charges?',
+      answer: 'If you have an active subscription or recurring order and wish to cancel, please contact us as soon as possible. Provide us with your account details, email address, or phone number associated with the order. We\'ll immediately request cancellation with the merchant and confirm once it\'s processed. Cancellations typically take effect within 24-48 hours, preventing any future charges.'
     },
     {
-      question: 'How is transaction data secured and is your platform compliant?',
-      answer: 'We maintain PCI-DSS Level 1 compliance and use bank-grade AES-256 encryption for all transaction data. We never store full credit card numbers—only tokenized references from your payment processor. All API communication uses TLS 1.3 encryption. Your customer data is fully isolated and never shared with other merchants or third parties.'
+      question: 'My product hasn\'t arrived. Can you help?',
+      answer: 'If you haven\'t received your order, we can help track it down. Contact us with your order details and approximate purchase date. We\'ll reach out to the merchant to check the shipping status and estimated delivery date. If the product is significantly delayed or lost in transit, we can help facilitate a refund or replacement shipment.'
     },
     {
-      question: 'Can I cancel or modify my merchant account anytime?',
-      answer: 'Yes. You can cancel or adjust your subscription at any time from your merchant dashboard. Cancellations take effect at the end of your current billing cycle with no early termination fees. You can export all transaction data, recovery analytics, and performance reports before making any account changes.'
+      question: 'I was charged twice for the same order. How do I fix this?',
+      answer: 'Duplicate charges occasionally happen due to system errors or payment processing issues. Please contact us with both transaction details from your bank statement. We\'ll investigate immediately and work with the merchant to refund the duplicate charge. Typically, duplicate charge refunds are processed within 3-5 business days once verified.'
     }
   ];
 
@@ -70,20 +70,20 @@ const SupportPage: React.FC = () => {
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          <path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
         </svg>
       ),
-      title: 'Integration Questions',
-      description: 'API setup, webhook configuration, gateway integration, and technical implementation for Call Center workflows'
+      title: 'I don\'t recognize this charge',
+      description: 'Unrecognized charges can be confusing and frustrating. We can help you identify the transaction and resolve your concern quickly.'
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+          <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
         </svg>
       ),
-      title: 'Performance Analytics',
-      description: 'Access recovery metrics, transaction performance data, revenue reports, and campaign analytics dashboards'
+      title: 'I want a refund',
+      description: 'If you\'re unsatisfied with a product or service and want a refund, we can help you contact the merchant and request your money back.'
     },
     {
       icon: (
@@ -91,41 +91,37 @@ const SupportPage: React.FC = () => {
           <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
         </svg>
       ),
-      title: 'Billing & Terms',
-      description: 'Subscription management, commission structure, invoice access, payment terms, and billing cycle questions'
+      title: 'I was charged twice',
+      description: 'If you\'ve been charged twice for the same product, we can help you identify the duplicate charge and get it refunded promptly.'
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+          <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
         </svg>
       ),
-      title: 'How We Help',
-      description: 'Learn how our Call Center recovery platform integrates with your workflow to maximize declined transaction recovery'
+      title: 'I want to cancel my order',
+      description: 'If you want to cancel your order before it ships, we can help you contact the merchant and request a cancellation and full refund.'
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
         </svg>
       ),
-      title: 'Account Management',
-      description: 'Merchant account settings, user permissions, team access, and subscription plan modifications'
+      title: 'Cancel my subscription',
+      description: 'We can help you cancel your subscription and prevent future charges from the merchant, ensuring a smooth and hassle-free experience.'
     },
     {
       icon: (
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+          <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
         </svg>
       ),
-      title: 'Security & Compliance',
-      description: 'PCI-DSS compliance, data encryption standards, API security protocols, and data protection policies'
+      title: 'Product didn\'t arrive',
+      description: 'If you haven\'t received the product you ordered, we can help you track the delivery and resolve the issue with the merchant.'
     }
   ];
-
-  const handleEmailClick = () => {
-    window.location.href = 'mailto:support@joinserenity.ai';
-  };
 
   const handleContactClick = () => {
     window.location.href = '/#contact';
@@ -138,12 +134,12 @@ const SupportPage: React.FC = () => {
         <SupportHero>
           <div>
             <HeroImageWrapper>
-              <HeroImage src="/heroSupport3.jpg" alt="Call Center Revenue Recovery Support" />
+              <HeroImage src="/heroSupport3.jpg" alt="Merchant Platform Support" />
             </HeroImageWrapper>
             
             <HeroContent>
-              <HeroTitle>Call Center Revenue Recovery</HeroTitle>
-              <HeroDescription>Need assistance with your decline salvage integration or recovery performance? Our merchant support team is here to help with technical questions, billing inquiries, and platform optimization.</HeroDescription>
+              <HeroTitle>Customer Care</HeroTitle>
+              <HeroDescription>Don't recognize a charge on your bank statement? We're here to help resolve your concerns.</HeroDescription>
             
               <ContactInfo>
                 <PhoneIcon>
@@ -162,7 +158,7 @@ const SupportPage: React.FC = () => {
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                   </svg>
-                  Contact Support
+                  Get Help Now
                 </ActionButton>
               </ActionButtons>
             </HeroContent>
@@ -170,7 +166,7 @@ const SupportPage: React.FC = () => {
         </SupportHero>
         
         <HelpSection>
-          <HelpTitle>How We Support Your Business</HelpTitle>
+          <HelpTitle>How can we help you today?</HelpTitle>
           <HelpGrid>
             {helpTopics.map((topic, index) => (
               <HelpCard key={index} onClick={handleContactClick} style={{ cursor: 'pointer' }}>
@@ -182,9 +178,9 @@ const SupportPage: React.FC = () => {
           </HelpGrid>
         </HelpSection>
 
-        <FAQSection>
+        <FAQSection id="contact-form">
           <FAQSectionTitle>Frequently Asked Questions</FAQSectionTitle>
-          <FAQSectionDescription>Common questions about integration, billing, performance, and compliance</FAQSectionDescription>
+          <FAQSectionDescription>Quick answers to common customer questions</FAQSectionDescription>
           <FAQList>
             {faqs.map((faq, index) => (
               <FAQItem key={index}>
