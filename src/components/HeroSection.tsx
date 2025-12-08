@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
             Request a Demo
           </CTAButtonPrimary> */}
           <CTAButtonSecondary onClick={handleSpeakToSales}>
-            Speak to Sales
+            Schedule a Call
           </CTAButtonSecondary>
         </CTAButtonGroup>
         <Highlight>We serve only call center clients.</Highlight>
