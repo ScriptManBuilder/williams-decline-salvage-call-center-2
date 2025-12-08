@@ -37,28 +37,28 @@ const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-      question: 'How do I integrate with the decline salvage platform?',
-      answer: 'Integration is straightforward. After signing up, you will receive API credentials and access to our developer documentation. Our RESTful API allows you to send failed transaction data, and we handle the recovery workflow. Most merchants complete integration within 1-2 weeks. We offer technical support and onboarding assistance to help you get started.'
+      question: 'How do I integrate with your Call Center decline recovery platform?',
+      answer: 'Our integration process is designed for businesses running Call Center operations. After setup, your declined transactions are forwarded to our recovery engine via API or secure data feed. Our team provides full technical support, workflow configuration, and agent training materials. Most merchants complete integration within 1-2 weeks with dedicated onboarding assistance.'
     },
     {
-      question: 'What payment gateways do you support?',
-      answer: 'We integrate with all major payment processors including Stripe, Braintree, Authorize.net, PayPal, Square, and custom payment gateways. Our platform works alongside your existing payment infrastructure - we never replace your processor. If you have a custom gateway, our team can help with integration.'
+      question: 'Which payment processors and gateways are supported?',
+      answer: 'We work with all major payment processors including Stripe, Authorize.net, Braintree, PayPal, Square, and custom gateways. Our platform integrates alongside your existing payment infrastructure without replacing it. For Call Center merchants using specialized gateway routing, our team provides custom integration support tailored to your workflow.'
     },
     {
-      question: 'How much do your services cost?',
-      answer: 'We offer flexible pricing based on transaction volume and features. Plans include a monthly subscription fee plus a success-based commission on recovered transactions. This means you only pay when we successfully recover revenue for you. Contact our sales team for a custom quote based on your business needs.'
+      question: 'What are your pricing and billing terms?',
+      answer: 'We offer performance-based pricing with a monthly platform fee plus success commission on recovered revenue. You only pay when we successfully recover declined transactions. Pricing scales with transaction volume and recovery performance. Contact our sales team for a custom quote based on your Call Center operation size and payment volume.'
     },
     {
-      question: 'How can I contact technical support?',
-      answer: 'You can reach our merchant support team by phone during business hours (Monday-Friday, 9 AM - 6 PM EST), by email anytime at support@joinserenity.ai, or through the support chat in your merchant dashboard. For urgent API issues, we offer priority support for enterprise clients.'
+      question: 'How do I access technical and merchant support?',
+      answer: 'Reach our merchant support team by phone during business hours (Monday-Friday, 9 AM - 6 PM EST) at the number listed above, or email support@joinserenity.ai anytime. Enterprise merchants receive priority support with dedicated account management and 24/7 API monitoring for mission-critical Call Center operations.'
     },
     {
-      question: 'Is my customer data secure on your platform?',
-      answer: 'Absolutely! We maintain PCI-DSS Level 1 compliance, use bank-grade encryption (AES-256), and follow strict security protocols. We never store full credit card numbers - only tokenized references from your payment processor. All data transmission uses TLS 1.3 encryption. Your customer data is isolated and never shared with other merchants.'
+      question: 'How is transaction data secured and is your platform compliant?',
+      answer: 'We maintain PCI-DSS Level 1 compliance and use bank-grade AES-256 encryption for all transaction data. We never store full credit card numbers—only tokenized references from your payment processor. All API communication uses TLS 1.3 encryption. Your customer data is fully isolated and never shared with other merchants or third parties.'
     },
     {
-      question: 'Can I cancel my subscription at any time?',
-      answer: 'Yes! You can cancel your merchant subscription at any time from your account settings. Cancellation takes effect at the end of your current billing period. There are no early termination fees. You can also export all your transaction data and analytics before canceling.'
+      question: 'Can I cancel or modify my merchant account anytime?',
+      answer: 'Yes. You can cancel or adjust your subscription at any time from your merchant dashboard. Cancellations take effect at the end of your current billing cycle with no early termination fees. You can export all transaction data, recovery analytics, and performance reports before making any account changes.'
     }
   ];
 
@@ -73,8 +73,35 @@ const SupportPage: React.FC = () => {
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
         </svg>
       ),
-      title: 'API Integration Support',
-      description: 'Help with API authentication, endpoint configuration, webhooks, and technical integration questions'
+      title: 'Integration Questions',
+      description: 'API setup, webhook configuration, gateway integration, and technical implementation for Call Center workflows'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+        </svg>
+      ),
+      title: 'Performance Analytics',
+      description: 'Access recovery metrics, transaction performance data, revenue reports, and campaign analytics dashboards'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+        </svg>
+      ),
+      title: 'Billing & Terms',
+      description: 'Subscription management, commission structure, invoice access, payment terms, and billing cycle questions'
+    },
+    {
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+      ),
+      title: 'How We Help',
+      description: 'Learn how our Call Center recovery platform integrates with your workflow to maximize declined transaction recovery'
     },
     {
       icon: (
@@ -83,34 +110,7 @@ const SupportPage: React.FC = () => {
         </svg>
       ),
       title: 'Account Management',
-      description: 'Questions about your merchant account, subscription plan, billing, and payment settings'
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
-        </svg>
-      ),
-      title: 'Dashboard & Analytics',
-      description: 'Help navigating the merchant dashboard, understanding recovery metrics, and generating reports'
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-        </svg>
-      ),
-      title: 'Recovery Workflow Setup',
-      description: 'Configure transaction recovery workflows, email/SMS templates, and customer communication sequences'
-    },
-    {
-      icon: (
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
-        </svg>
-      ),
-      title: 'Billing & Invoices',
-      description: 'Questions about subscription fees, commission charges, invoices, and payment methods'
+      description: 'Merchant account settings, user permissions, team access, and subscription plan modifications'
     },
     {
       icon: (
@@ -119,7 +119,7 @@ const SupportPage: React.FC = () => {
         </svg>
       ),
       title: 'Security & Compliance',
-      description: 'Information about data security, PCI compliance, API security best practices, and data protection'
+      description: 'PCI-DSS compliance, data encryption standards, API security protocols, and data protection policies'
     }
   ];
 
@@ -138,12 +138,12 @@ const SupportPage: React.FC = () => {
         <SupportHero>
           <div>
             <HeroImageWrapper>
-              <HeroImage src="/heroSupport3.jpg" alt="Merchant Platform Support" />
+              <HeroImage src="/heroSupport3.jpg" alt="Call Center Revenue Recovery Support" />
             </HeroImageWrapper>
             
             <HeroContent>
-              <HeroTitle>Merchant Platform Support</HeroTitle>
-              <HeroDescription>Need help with your decline salvage integration? Our technical support team is here to assist you.</HeroDescription>
+              <HeroTitle>Call Center Revenue Recovery</HeroTitle>
+              <HeroDescription>Need assistance with your decline salvage integration or recovery performance? Our merchant support team is here to help with technical questions, billing inquiries, and platform optimization.</HeroDescription>
             
               <ContactInfo>
                 <PhoneIcon>
@@ -162,7 +162,7 @@ const SupportPage: React.FC = () => {
                   <svg viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                   </svg>
-                  Get Help
+                  Contact Support
                 </ActionButton>
               </ActionButtons>
             </HeroContent>
@@ -170,7 +170,7 @@ const SupportPage: React.FC = () => {
         </SupportHero>
         
         <HelpSection>
-          <HelpTitle>How Can We Help You Today?</HelpTitle>
+          <HelpTitle>How We Support Your Business</HelpTitle>
           <HelpGrid>
             {helpTopics.map((topic, index) => (
               <HelpCard key={index} onClick={handleContactClick} style={{ cursor: 'pointer' }}>
@@ -184,7 +184,7 @@ const SupportPage: React.FC = () => {
 
         <FAQSection>
           <FAQSectionTitle>Frequently Asked Questions</FAQSectionTitle>
-          <FAQSectionDescription>Quick answers to common support questions</FAQSectionDescription>
+          <FAQSectionDescription>Common questions about integration, billing, performance, and compliance</FAQSectionDescription>
           <FAQList>
             {faqs.map((faq, index) => (
               <FAQItem key={index}>
