@@ -14,11 +14,13 @@ import {
   ContactItem,
   ContactLabel,
   ContactValue,
-  FooterBottom
+  FooterBottom,
+  PaymentLogos,
+  PaymentLogo
 } from '../styles/Footer.styles';
 
 const Footer: React.FC = () => {
-  const brandName = process.env.REACT_APP_BRAND_NAME || 'Keltrova';
+  const brandName = process.env.REACT_APP_BRAND_NAME || 'Revylant';
   const companyName = process.env.REACT_APP_COMPANY_NAME || 'The Williams Collection Inc.';
   const companyAddress = process.env.REACT_APP_COMPANY_ADDRESS || 'E 2ND ST 5830 Casper WY US 82609';
   const companyPhone = process.env.REACT_APP_PHONE_DISPLAY || '+1 517-258-3818';
@@ -44,8 +46,8 @@ const Footer: React.FC = () => {
           <FooterSection>
             <FooterLogo>
               <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
-                <circle cx="12" cy="4" r="1.5" fill="currentColor"/>
+                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.3"/>
               </svg>
               {brandName}
             </FooterLogo>
@@ -54,6 +56,14 @@ const Footer: React.FC = () => {
               <p>{companyAddress}</p>
               <p>Established March 2023</p>
             </CompanyInfo>
+            <PaymentLogos>
+              <PaymentLogo>
+                <img src="/visa.svg" alt="Visa" />
+              </PaymentLogo>
+              <PaymentLogo>
+                <img src="/mastercard.svg" alt="Mastercard" />
+              </PaymentLogo>
+            </PaymentLogos>
           </FooterSection>
 
           <FooterSection>
@@ -142,7 +152,7 @@ const Footer: React.FC = () => {
         </FooterGrid>
 
         <FooterBottom>
-          <p>&copy; {new Date().getFullYear()} {companyName}  All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {companyName} All rights reserved.</p>
           <p>Enterprise decline-salvage platform for merchants. PCI-DSS compliant. GDPR & CCPA ready.</p>
         </FooterBottom>
       </FooterContent>
