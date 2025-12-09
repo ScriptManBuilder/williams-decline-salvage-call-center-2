@@ -29,8 +29,8 @@ import {
   FAQAnswer,
   FAQIcon
 } from '../styles/SupportPage.styles';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import SupportHeader from '../components/SupportHeader';
+import SupportFooter from '../components/SupportFooter';
 import ContactForm from '../components/ContactForm';
 
 const SupportPage: React.FC = () => {
@@ -38,28 +38,20 @@ const SupportPage: React.FC = () => {
 
   const faqs = [
     {
-      question: 'Why am I seeing a charge on my bank statement?',
-      answer: 'If you see an unfamiliar charge on your statement, it may be from a recent purchase through a catalog, mail order, or phone order. The charge might appear under our payment processing name rather than the merchant\'s name. Check your recent mail for catalogs or promotional offers you may have responded to. If you still don\'t recognize the charge, please contact us immediately with the transaction details and we\'ll help identify it.'
+      question: `How does ${process.env.REACT_APP_BRAND_NAME} assist with transaction issues?`,
+      answer: 'If you notice an unexpected charge, it\'s likely related to a recent purchase that may not have completed successfully. Our team can help you identify the specific transaction and assist in resolving any concerns you may have.'
     },
     {
-      question: 'How do I request a refund?',
-      answer: 'To request a refund, please contact us with your transaction details including the charge amount, date, and any order information you have. Our team will work with the merchant on your behalf to process your refund request. Most refunds are processed within 5-10 business days, though it may take additional time for your bank to post the credit to your account. We\'ll keep you informed throughout the process.'
+      question: 'What does this charge on my statement mean?',
+      answer: 'If you notice an unexpected charge, it\'s likely related to a transaction that didn\'t complete successfully. Our team can help you identify the specific transaction and assist in resolving any concerns you may have.'
     },
     {
-      question: 'I didn\'t authorize this charge. What should I do?',
-      answer: 'If you believe a charge is unauthorized, contact us immediately at the phone number listed above. We take unauthorized transactions very seriously and will investigate right away. Please have your bank statement ready with the charge details. In the meantime, you may also want to contact your bank to dispute the charge. We\'ll work quickly to resolve the issue and ensure no further charges occur.'
+      question: 'How can I get a refund?',
+      answer: 'To request a refund, please contact us with your transaction details. Our team will work with the merchant on your behalf to process your refund request and keep you informed throughout the process.'
     },
     {
-      question: 'How do I cancel a subscription or prevent future charges?',
-      answer: 'If you have an active subscription or recurring order and wish to cancel, please contact us as soon as possible. Provide us with your account details, email address, or phone number associated with the order. We\'ll immediately request cancellation with the merchant and confirm once it\'s processed. Cancellations typically take effect within 24-48 hours, preventing any future charges.'
-    },
-    {
-      question: 'My product hasn\'t arrived. Can you help?',
-      answer: 'If you haven\'t received your order, we can help track it down. Contact us with your order details and approximate purchase date. We\'ll reach out to the merchant to check the shipping status and estimated delivery date. If the product is significantly delayed or lost in transit, we can help facilitate a refund or replacement shipment.'
-    },
-    {
-      question: 'I was charged twice for the same order. How do I fix this?',
-      answer: 'Duplicate charges occasionally happen due to system errors or payment processing issues. Please contact us with both transaction details from your bank statement. We\'ll investigate immediately and work with the merchant to refund the duplicate charge. Typically, duplicate charge refunds are processed within 3-5 business days once verified.'
+      question: 'How do I contact customer support?',
+      answer: 'You can reach our support team by phone during business hours or by filling out the contact form below. We\'re here to help resolve any billing questions or concerns you may have.'
     }
   ];
 
@@ -137,7 +129,7 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
-      <Header />
+      <SupportHeader />
       <SupportContainer>
         <SupportHero>
           <div>
@@ -186,7 +178,7 @@ const SupportPage: React.FC = () => {
           </HelpGrid>
         </HelpSection>
 
-        <FAQSection>
+        <FAQSection id="faq-section">
           <FAQSectionTitle>Frequently Asked Questions</FAQSectionTitle>
           <FAQSectionDescription>Quick answers to common customer questions</FAQSectionDescription>
           <FAQList>
@@ -225,7 +217,7 @@ const SupportPage: React.FC = () => {
 
         <ContactForm />
       </SupportContainer>
-      <Footer />
+      <SupportFooter />
     </>
   );
 };
