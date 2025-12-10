@@ -132,16 +132,36 @@ const SupportHeader: React.FC = () => {
   };
 
   const handleFaqClick = () => {
-    const faqSection = document.querySelector('#faq-section');
-    if (faqSection) {
-      faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.location.pathname === '/support') {
+      const faqSection = document.querySelector('#faq-section');
+      if (faqSection) {
+        faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      navigate('/support');
+      setTimeout(() => {
+        const faqSection = document.querySelector('#faq-section');
+        if (faqSection) {
+          faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
     }
   };
 
   const handleRequestRefund = () => {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (window.location.pathname === '/support') {
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      navigate('/support');
+      setTimeout(() => {
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+          contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
     }
   };
 
