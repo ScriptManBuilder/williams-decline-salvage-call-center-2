@@ -109,9 +109,10 @@ const SupportHeader: React.FC = () => {
     navigate('/');
   };
 
-  const handleAboutClick = () => {
-    navigate('/company-info');
+    const handleAboutClick = () => {
+    navigate('/about');
   };
+
 
   const handleSupportClick = () => {
     if (window.location.pathname === '/support') {

@@ -106,7 +106,7 @@ const SupportFooter: React.FC = () => {
             <SectionTitle>{brandName}</SectionTitle>
             <LinkList>
               <li><FooterLink onClick={() => navigate('/')}>Home</FooterLink></li>
-              <li><FooterLink onClick={() => navigate('/company-info')}>About</FooterLink></li>
+              <li><FooterLink onClick={() => navigate('/about')}>About</FooterLink></li>
               <li><FooterLink onClick={() => {
                 const faqSection = document.querySelector('#faq-section');
                 if (faqSection) {

@@ -23,6 +23,7 @@ import CompanyInfoPage from './pages/CompanyInfoPage';
 import DigitalProductsPage from './pages/DigitalProductsPage';
 import EndUserTermsPage from './pages/EndUserTermsPage';
 import MerchantDisclosurePage from './pages/MerchantDisclosurePage';
+import AboutPage from './pages/AboutPage';
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -67,6 +68,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/support" element={<SupportPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/data-subject-request" element={<DataSubjectRequestPage />} />
         <Route path="/e-signature" element={<ESignaturePage />} />
         <Route path="/ccpa-notice" element={<CCPANoticePage />} />
